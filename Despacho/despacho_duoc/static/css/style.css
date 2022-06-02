@@ -5,3 +5,7 @@ header{
 main{
     background-color: #f8f9fa;
 }
+#map {
+	height: 500px;
+	width: 100%;
+}

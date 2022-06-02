@@ -27,7 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'despacho_duoc.apps.DespachoDuocConfig'
+    'despacho_duoc.apps.DespachoDuocConfig',
+    'Crud.apps.CrudConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
