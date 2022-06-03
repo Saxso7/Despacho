@@ -14,6 +14,12 @@ def get_despacho(request):
     return Response(serializer.data)
 
 
+@api_view(['GET'])
+def get_postVenta(request):
+    post_venta = Post_ventas.objects.all()
+    serializer = PostVentasSerializer(post_venta, many=True)
+    return Response(serializer.data)
+
 
 @api_view(['PUT'])
 def put_despacho_postVentas(request):
@@ -27,7 +33,17 @@ def put_despacho_postVentas(request):
 
 @api_view(['DELETE'])
 def EliminarDespachos(request, pk):
-    despacho = Despacho.objects.get(nroSeguimiento=pk)
+    despacho = Despacho.objects.get(id=pk)
     despacho.delete()
 
     return Response('Eliminado')
+
+@api_view(['POST'])
+def CrearDespacho(request):
+    serializer = DespachoSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    else:
+        return Response(serializer.errors)
+
+    return Response(serializer.data)

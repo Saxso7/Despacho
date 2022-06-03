@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-+fzkbi#8hcc((^140=yzcode0(7q7s$jf9)&$&s)d0vu$-$!$h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.237.16.12','127.0.0.1']
 
 
 # Application definition
@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'despacho_duoc.apps.DespachoDuocConfig',
     'Crud.apps.CrudConfig',
-    'rest_framework'
+    'rest_framework',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
