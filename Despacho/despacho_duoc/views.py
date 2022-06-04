@@ -20,3 +20,9 @@ def seguimiento(request):
 
     })
 
+def misCompras(request):
+    return render(request, 'misCompras.html',{
+
+    })
+
+
