@@ -43,6 +43,10 @@
               </div>
             </div>
           </nav>
+          
+
+          
+
     </header>
     <main class="main">
         <div class="container-fluid">
@@ -51,13 +55,54 @@
                     <h1> Ubicacion de nuestras oficinas</h1>
                     <div id="map"></div>
                 </div>
-                <div class="card bg-light col-5 mt-3">
+                <div class="card bg-light col-5 mt-3 " style="overflow-y: scroll; height: 540px;">
+                    <h1 class="fst-italic">Lista de despachos</h1>
                     <ul>
-                        {% for obj in response_json %}
-                            <li>id: {{ obj.id }} </li>
-                            <li>nombre: {{ obj.name }}</li>
-                            <li>descripcion: {{ obj.description }}</li>
-                        {% endfor %}
+                      
+                      <li>direccion es {{channel_direccion}}</li>
+                      <li>nombre es {{channel_nombre}}</li>
+                      <li>rut es {{channel_rut}}</li>
+                      <li>telefono es {{channel_telefono}}</li>
+                      <li>producto es {{channel_producto}}</li>
+                      <li>precio es {{channel_precio}}</li>
+                      <li>distancia es {{channel_distancia}}</li>                     
+                      
+                    </ul>
+                    <ul>
+                      <li>direccion es {{channel_direccion2}}</li>
+                      <li>nombre es {{channel_nombre2}}</li>
+                      <li>rut es {{channel_rut2}}</li>
+                      <li>telefono es {{channel_telefono2}}</li>
+                      <li>producto es {{channel_producto2}}</li>
+                      <li>precio es {{channel_precio2}}</li>
+                      <li>distancia es {{channel_distancia2}}</li>
+                    </ul>
+                    <ul>
+                      <li>direccion es {{channel_direccion3}}</li>
+                      <li>nombre es {{channel_nombre3}}</li>
+                      <li>rut es {{channel_rut3}}</li>
+                      <li>telefono es {{channel_telefono3}}</li>
+                      <li>producto es {{channel_producto3}}</li>
+                      <li>precio es {{channel_precio3}}</li>
+                      <li>distancia es {{channel_distancia3}}</li>
+                    </ul>
+                    <ul>
+                      <li>direccion es {{channel_direccion4}}</li>
+                      <li>nombre es {{channel_nombre4}}</li>
+                      <li>rut es {{channel_rut4}}</li>
+                      <li>telefono es {{channel_telefono4}}</li>
+                      <li>producto es {{channel_producto4}}</li>
+                      <li>precio es {{channel_precio4}}</li>
+                      <li>distancia es {{channel_distancia4}}</li>
+                    </ul>
+                    <ul>
+                      <li>direccion es {{channel_direccion5}}</li>
+                      <li>nombre es {{channel_nombre5}}</li>
+                      <li>rut es {{channel_rut5}}</li>
+                      <li>telefono es {{channel_telefono5}}</li>
+                      <li>producto es {{channel_producto5}}</li>
+                      <li>precio es {{channel_precio5}}</li>
+                      <li>distancia es {{channel_distancia5}}</li>
                     </ul>
                 </div>
             </div>

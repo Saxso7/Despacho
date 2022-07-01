@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Despacho, Post_ventas
+from .models import Costo, Despacho, Post_ventas
 
 
 class DespachoSerializer(serializers.ModelSerializer):
@@ -10,4 +10,9 @@ class DespachoSerializer(serializers.ModelSerializer):
 class PostVentasSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post_ventas
+        fields = '__all__'
+
+class CostoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Costo
         fields = '__all__'

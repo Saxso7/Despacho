@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Despacho, Post_ventas
-from .serializers import DespachoSerializer, PostVentasSerializer
+from .models import Despacho, Post_ventas, Costo
+from .serializers import DespachoSerializer, PostVentasSerializer, CostoSerializer
 
 
 
@@ -12,6 +12,14 @@ def get_despacho(request):
     despacho = Despacho.objects.all()
     serializer = DespachoSerializer(despacho, many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def get_costo(request):
+    costo = Costo.objects.all()
+    serializer = CostoSerializer(costo, many=True)
+    return Response(serializer.data)
+
+
 
 
 @api_view(['GET'])
@@ -47,3 +55,15 @@ def CrearDespacho(request):
         return Response(serializer.errors)
 
     return Response(serializer.data)
+
+@api_view(['POST'])
+def CrearCosto(request):
+    serializer = CostoSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    else:
+        return Response(serializer.errors)
+
+    return Response(serializer.data)
+
+
